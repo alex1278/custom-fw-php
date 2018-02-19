@@ -1,5 +1,7 @@
 <?php
 
+namespace vendor\core;
+
 /**
  * Created by PhpStorm.
  * User: alex
@@ -8,21 +10,42 @@
  */
 class Router
 {
-    public function __construct(){
-        echo "Hello, World";
-    }
-
+    /**
+     * таблица маршрутов
+     * @var array
+     */
     protected static $routes = []; /* arr with all routs */
+
+    /**
+     * текущий маршрут
+     * @var array
+     */
     protected static $route = [];
 
+    /**
+     * добавляет маршрут в таблицу маршрутов
+     *
+     * @param $regexp регулярное выражение маршрута
+     * @param array $route маршрут ([controller, action, params])
+     */
     public static function add($regexp, $route = []){
            self::$routes[$regexp] = $route;
     }
 
+    /**
+     * возвращает таблицу маршрутов
+     *
+     * @return array
+     */
     public static function getRoutes(){
         return self::$routes;
     }
 
+    /**
+     * возвращает текущий маршрут ([controller, action, params])
+     *
+     * @return array
+     */
     public static function getRoute(){
         return self::$route;
     }
@@ -43,9 +66,8 @@ class Router
                 if(!isset($route['action'])){
                     $route['action'] = 'index';
                 }
+                $route['controller'] = self::upperCamelCase($route['controller']);
                 self::$route = $route;
-                debug($matches);
-                debug(self::$route);
                 return true;
             }
         }
@@ -58,13 +80,15 @@ class Router
      * @return void
      */
     public static function dispatch($url){
+        $url = self::removeQueryString($url);
         if(self::matchRoute($url)) {
-            $controller = self::upperCamelCase(self::$route['controller']);
+            $controller = 'app\controllers\\'.self::$route['controller'].'Controller';
             if(class_exists($controller)){
-                $cObj = new $controller;
+                $cObj = new $controller(self::$route);
                 $action = self::lowerCamelCase(self::$route['action']).'Action';
                 if(method_exists($cObj, $action)){
                     $cObj->$action();
+                    $cObj->getView();
                 }else{
                     echo "Метод <b>$controller::$action</b> не найден!!!";
                 }
@@ -78,16 +102,39 @@ class Router
     }
 
 
-    /*
-     * преобразует первую букву слова в Uppercase
+    /**
+     * преобразует имена к виду camelCase
+     * @param $name
+     * @return mixed
      */
+
     protected static function upperCamelCase($name){
          return str_replace(' ', '', ucwords(str_replace('-', ' ', $name)));
     }
-    /*
-     * преобразует первую букву в Lowercase
+
+    /**
+     * возвращает строку без GET параметров
+     * @param $name строка для преобразования
+     * @return string
      */
+
     protected static function lowerCamelCase($name){
         return lcfirst(self::upperCamelCase($name));
     }
+
+    /**
+     * возвращает строку без GET параметров
+     * @param $url
+     * @return string
+     */
+    protected static function removeQueryString($url){
+        if($url){
+            $params = explode('&', $url, 2); // explode GET params, max 2 elements
+            if(false === strpos($params[0], '=')){
+                return rtrim($params[0], '/');
+            }
+        }
+        return $url;
+    }
+
 }
