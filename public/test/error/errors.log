@@ -1,0 +1,10 @@
+[2018-02-24 00:56:38] Текст ошибки: Undefined variable: test2 | Файл: C:\OpenServer\domains\custom-fw.loc\public\test\error\index.php, | Строка: 88
+===========================
+[2018-02-24 00:57:42] Текст ошибки: Undefined variable: test2 | Файл: C:\OpenServer\domains\custom-fw.loc\public\test\error\index.php, | Строка: 88
+===========================
+[2018-02-24 01:03:31] Текст ошибки: Call to undefined function test() | Файл: C:\OpenServer\domains\custom-fw.loc\public\test\error\index.php, | Строка: 96
+===========================
+[2018-02-24 01:03:49] Текст ошибки: Страница не найдена | Файл: C:\OpenServer\domains\custom-fw.loc\public\test\error\index.php, | Строка: 111
+===========================
+[2018-02-24 01:04:02] Текст ошибки: Нежданчик! | Файл: C:\OpenServer\domains\custom-fw.loc\public\test\error\index.php, | Строка: 110
+===========================

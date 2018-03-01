@@ -1,0 +1,28 @@
+[2018-02-28 02:29:33] Текст ошибки: Undefined variable: test | Файл: C:\OpenServer\domains\custom-fw.loc\app\controllers\MainController.php, | Строка: 28
+===========================
+[2018-02-28 23:01:37] Текст ошибки: Станица не найдена | Файл: C:\OpenServer\domains\custom-fw.loc\vendor\fw\core\Router.php, | Строка: 109
+===========================
+[2018-03-01 00:05:11] Текст ошибки: Станица не найдена | Файл: C:\OpenServer\domains\custom-fw.loc\vendor\fw\core\Router.php, | Строка: 109
+===========================
+[2018-03-01 01:22:07] Текст ошибки: Станица не найдена | Файл: C:\OpenServer\domains\custom-fw.loc\vendor\fw\core\Router.php, | Строка: 109
+===========================
+[2018-03-01 01:23:48] Текст ошибки: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'alex1278@list.ru' for key 'email' | Файл: C:\OpenServer\domains\custom-fw.loc\vendor\fw\libs\rb.php, | Строка: 735
+===========================
+[2018-03-01 01:24:12] Текст ошибки: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'alex1278@list.ru' for key 'email' | Файл: C:\OpenServer\domains\custom-fw.loc\vendor\fw\libs\rb.php, | Строка: 735
+===========================
+[2018-03-01 01:24:13] Текст ошибки: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'alex1278@list.ru' for key 'email' | Файл: C:\OpenServer\domains\custom-fw.loc\vendor\fw\libs\rb.php, | Строка: 735
+===========================
+[2018-03-01 01:31:41] Текст ошибки: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'alex1' for key 'login' | Файл: C:\OpenServer\domains\custom-fw.loc\vendor\fw\libs\rb.php, | Строка: 735
+===========================
+[2018-03-01 01:57:19] Текст ошибки: Станица не найдена | Файл: C:\OpenServer\domains\custom-fw.loc\vendor\fw\core\Router.php, | Строка: 109
+===========================
+[2018-03-01 02:04:22] Текст ошибки: <p>Не найден вид <b>C:\OpenServer\domains\custom-fw.loc/app/views/User/logout.php</b></p> | Файл: C:\OpenServer\domains\custom-fw.loc\vendor\fw\core\base\View.php, | Строка: 59
+===========================
+[2018-03-01 02:05:41] Текст ошибки: Станица не найдена | Файл: C:\OpenServer\domains\custom-fw.loc\vendor\fw\core\Router.php, | Строка: 109
+===========================
+[2018-03-01 02:14:21] Текст ошибки: Станица не найдена | Файл: C:\OpenServer\domains\custom-fw.loc\vendor\fw\core\Router.php, | Строка: 109
+===========================
+[2018-03-01 03:43:33] Текст ошибки: Станица не найдена | Файл: C:\OpenServer\domains\custom-fw.loc\vendor\fw\core\Router.php, | Строка: 109
+===========================
+[2018-03-01 03:47:36] Текст ошибки: <p>Не найден вид <b>C:\OpenServer\domains\custom-fw.loc/app/views/User/logout.php</b></p> | Файл: C:\OpenServer\domains\custom-fw.loc\vendor\fw\core\base\View.php, | Строка: 60
+===========================
